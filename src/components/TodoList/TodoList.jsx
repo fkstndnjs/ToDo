@@ -40,13 +40,13 @@ export default function TodoList({ filter }) {
   const filterdTodos = filtering(todos, filter);
 
   return (
-    <div>
+    <section>
       <ul>
         {filterdTodos.map((todo) => (
           <Todo todo={todo} onUpdate={handleUpdate} onDelete={handleDelete} />
         ))}
       </ul>
       <Input addTodos={addTodos} />
-    </div>
+    </section>
   );
 }

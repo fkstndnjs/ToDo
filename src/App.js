@@ -7,10 +7,10 @@ function App() {
   const [filter, setFilter] = useState("all");
 
   return (
-    <div>
-      <Filter setFilter={setFilter} />
+    <>
+      <Filter filter2={filter} setFilter={setFilter} />
       <TodoList filter={filter} />
-    </div>
+    </>
   );
 }
 
