@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Todo({ todo, onUpdate, onDelete }) {
   const handleChange = (e) => {
-    onUpdate({ ...todo, status: e.target.checked ? "completed" : "active" });
+    onUpdate({ ...todo, status: e.target.checked ? "complete" : "active" });
   };
 
   return (
@@ -11,7 +11,7 @@ export default function Todo({ todo, onUpdate, onDelete }) {
         type="checkbox"
         name=""
         id="checkbox"
-        checked={todo.status === "completed"}
+        checked={todo.status === "complete"}
         onChange={handleChange}
       />
       <label htmlFor="checkbox">{todo.text}</label>
