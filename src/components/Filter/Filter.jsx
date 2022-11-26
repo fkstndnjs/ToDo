@@ -1,10 +1,14 @@
-import React from "react";
-
-const filters = ["all", "active", "complete"];
-
 export default function Filter({ setFilter }) {
+  const filters = ["all", "active", "complete"];
+
   return (
-    <ul>
+    <ul
+      style={{
+        display: "flex",
+        justifyContent: "space-around",
+        listStyle: "none",
+      }}
+    >
       {filters.map((filter, index) => {
         return (
           <li key={index}>

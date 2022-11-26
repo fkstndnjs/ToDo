@@ -19,6 +19,11 @@ export default function Input({ addTodos }) {
   return (
     <form onSubmit={handleSubmit}>
       <input
+        style={{
+          borderRadius: "20px",
+          padding: "10px",
+          marginRight: "5px",
+        }}
         type="text"
         placeholder="Add Text"
         value={text}
