@@ -2,13 +2,7 @@ export default function Filter({ setFilter }) {
   const filters = ["all", "active", "complete"];
 
   return (
-    <ul
-      style={{
-        display: "flex",
-        justifyContent: "space-around",
-        listStyle: "none",
-      }}
-    >
+    <ul>
       {filters.map((filter, index) => {
         return (
           <li key={index}>

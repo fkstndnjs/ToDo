@@ -7,16 +7,7 @@ function App() {
   const [filter, setFilter] = useState("all");
 
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        width: "300px",
-        backgroundColor: "antiquewhite",
-        borderRadius: "20px",
-        padding: "50px",
-      }}
-    >
+    <div>
       <Filter setFilter={setFilter} />
       <TodoList filter={filter} />
     </div>

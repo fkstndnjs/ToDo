@@ -40,9 +40,7 @@ export default function TodoList({ filter }) {
   const filterdTodos = filtering(todos, filter);
 
   return (
-    <div
-      style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
-    >
+    <div>
       <ul>
         {filterdTodos.map((todo) => (
           <Todo todo={todo} onUpdate={handleUpdate} onDelete={handleDelete} />
