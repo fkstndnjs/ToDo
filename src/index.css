@@ -4,6 +4,7 @@
   --color-grey: #d1d1d1;
   --color-text: #22243b;
   --color-accent: #f16e03;
+  --color-white: white;
 }
 
 body {
@@ -25,6 +26,7 @@ body {
     rgba(118, 118, 153, 1) 100%,
     rgba(0, 212, 255, 1) 100%
   );
+  font-size: 1.2rem;
 }
 
 #root {
@@ -52,4 +54,8 @@ ul {
 button {
   outline: none;
   border: none;
+}
+
+* {
+  box-sizing: border-box;
 }
