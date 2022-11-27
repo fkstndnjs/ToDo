@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./Todo.module.css";
 
 export default function Todo({ todo, onUpdate, onDelete }) {
   const handleChange = (e) => {
@@ -6,7 +7,7 @@ export default function Todo({ todo, onUpdate, onDelete }) {
   };
 
   return (
-    <li>
+    <li className={styles.li}>
       <input
         type="checkbox"
         name=""
@@ -14,14 +15,19 @@ export default function Todo({ todo, onUpdate, onDelete }) {
         checked={todo.status === "complete"}
         onChange={handleChange}
       />
-      <label htmlFor="checkbox">{todo.text}</label>
-      <button
-        onClick={() => {
-          onDelete(todo);
-        }}
-      >
-        삭제
-      </button>
+      <label className={styles.label} htmlFor="checkbox">
+        {todo.text}
+      </label>
+      <span className={styles.icon}>
+        <button
+          className={styles.button}
+          onClick={() => {
+            onDelete(todo);
+          }}
+        >
+          삭제
+        </button>
+      </span>
     </li>
   );
 }
